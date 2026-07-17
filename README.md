@@ -23,10 +23,6 @@ The idea of the application is pretty simple - we make a call to an API, which t
 - Flexbox and Grid layouts with media queries for responsiveness
 - `normalize.css` and the Cabinet Grotesk font family
 
-## Screenshots
-
-_Screenshots or a demo video of the project will be added here._
-
 ## Links
 
 - [Live site on GitHub Pages](https://godevun.github.io/se_project_react/)
