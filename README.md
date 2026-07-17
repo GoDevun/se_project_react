@@ -29,6 +29,7 @@ _Screenshots or a demo video of the project will be added here._
 
 ## Links
 
+- [Live site on GitHub Pages](https://godevun.github.io/se_project_react/)
 - [Figma Design](https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-Project--WTWR)
 
 ## Running the project
