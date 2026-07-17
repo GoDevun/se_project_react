@@ -1,0 +1,40 @@
+.modal__container_type_preview {
+  max-width: 498px;
+  padding: 0;
+}
+
+.modal__close-button_type_preview {
+  top: -40px;
+  right: -40px;
+  background-image: url(../../assets/close-icon-white.svg);
+}
+
+.modal__card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.modal__card-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 28px 24px;
+}
+
+.modal__card-name,
+.modal__card-weather {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  .modal__close-button_type_preview {
+    top: -40px;
+    right: 0;
+  }
+}

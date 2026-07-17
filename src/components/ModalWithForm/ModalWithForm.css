@@ -1,0 +1,140 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal_is-opened {
+  display: flex;
+}
+
+.modal__container {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 496px;
+  padding: 28px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent url(../../assets/close-icon.svg) center / contain
+    no-repeat;
+  cursor: pointer;
+}
+
+.modal__close-button:hover {
+  opacity: 0.6;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.modal__input {
+  padding: 0 0 4px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.modal__input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__input:invalid:not(:placeholder-shown) {
+  border-bottom-color: #f0552b;
+  color: #f0552b;
+}
+
+.modal__label:has(.modal__input:invalid:not(:placeholder-shown)) {
+  color: #f0552b;
+}
+
+.modal__radio-fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.modal__legend {
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.modal__label_type_radio {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__label_type_radio:hover,
+.modal__label_type_radio:has(.modal__radio-input:checked) {
+  color: #000000;
+}
+
+.modal__radio-input {
+  margin: 0;
+  accent-color: #000000;
+}
+
+.modal__submit-button {
+  align-self: flex-start;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.modal__submit-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
