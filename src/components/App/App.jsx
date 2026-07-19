@@ -51,7 +51,7 @@ function App() {
   function handleAddItemSubmit(inputValues, resetForm) {
     addItem(inputValues)
       .then((newItem) => {
-        setClothingItems([newItem, ...clothingItems]);
+        setClothingItems((prevItems) => [newItem, ...prevItems]);
         resetForm();
         handleCloseModal();
       })
@@ -61,8 +61,8 @@ function App() {
   function handleCardDelete() {
     deleteItem(selectedCard._id)
       .then(() => {
-        setClothingItems(
-          clothingItems.filter((item) => item._id !== selectedCard._id),
+        setClothingItems((prevItems) =>
+          prevItems.filter((item) => item._id !== selectedCard._id),
         );
         setSelectedCard({});
         handleCloseModal();
