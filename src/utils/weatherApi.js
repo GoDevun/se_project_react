@@ -1,9 +1,4 @@
-function checkResponse(response) {
-  if (response.ok) {
-    return response.json();
-  }
-  return Promise.reject(new Error(`Error: ${response.status}`));
-}
+import { checkResponse } from "./api";
 
 function getWeather({ latitude, longitude }, apiKey) {
   return fetch(
@@ -14,7 +9,10 @@ function getWeather({ latitude, longitude }, apiKey) {
 function filterWeatherData(data) {
   const weatherData = {
     city: data.name,
-    temperature: Math.round(data.main.temp),
+    temperature: {
+      F: Math.round(data.main.temp),
+      C: Math.round(((data.main.temp - 32) * 5) / 9),
+    },
     condition: getWeatherCondition(data.main.temp),
     conditionType: getConditionType(data.weather[0].id),
     isDay: checkIsDaytime(data.sys, Date.now()),

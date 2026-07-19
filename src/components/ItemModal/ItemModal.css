@@ -19,9 +19,16 @@
 
 .modal__card-caption {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px 28px 24px;
+}
+
+.modal__card-info {
+  display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 20px 28px 24px;
 }
 
 .modal__card-name,
@@ -30,6 +37,22 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
+}
+
+.modal__delete-button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #f0552b;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.modal__delete-button:hover {
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 640px) {

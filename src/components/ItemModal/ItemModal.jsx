@@ -1,6 +1,6 @@
 import "./ItemModal.css";
 
-function ItemModal({ isOpen, card, onClose }) {
+function ItemModal({ isOpen, card, onClose, onDeleteClick }) {
   function handleOverlayClick(event) {
     if (event.target === event.currentTarget) {
       onClose();
@@ -19,10 +19,23 @@ function ItemModal({ isOpen, card, onClose }) {
           aria-label="Close"
           onClick={onClose}
         ></button>
-        <img src={card.link} alt={card.name} className="modal__card-image" />
+        <img
+          src={card.imageUrl}
+          alt={card.name}
+          className="modal__card-image"
+        />
         <div className="modal__card-caption">
-          <p className="modal__card-name">{card.name}</p>
-          <p className="modal__card-weather">Weather: {card.weather}</p>
+          <div className="modal__card-info">
+            <p className="modal__card-name">{card.name}</p>
+            <p className="modal__card-weather">Weather: {card.weather}</p>
+          </div>
+          <button
+            type="button"
+            className="modal__delete-button"
+            onClick={onDeleteClick}
+          >
+            Delete item
+          </button>
         </div>
       </div>
     </div>
